@@ -6,7 +6,7 @@
 ;; Maintainer: Protesilaos Stavrou General Issues <~protesilaos/general-issues@lists.sr.ht>
 ;; URL: https://git.sr.ht/~protesilaos/spacious-padding
 ;; Mailing-List: https://lists.sr.ht/~protesilaos/general-issues
-;; Version: 0.0.0
+;; Version: 0.1.0
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: convenience, focus, writing, presentation
 
@@ -67,7 +67,7 @@
   "Make window dividers for THEME invisible."
   (let ((bg (face-background 'default)))
     (custom-set-faces
-     `(fringe ((t :background ,bg :foreground ,bg)))
+     `(fringe ((t :background ,bg)))
      `(window-divider ((t :background ,bg :foreground ,bg)))
      `(window-divider-first-pixel ((t :background ,bg :foreground ,bg)))
      `(window-divider-last-pixel ((t :background ,bg :foreground ,bg))))))
