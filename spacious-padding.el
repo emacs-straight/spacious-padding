@@ -6,7 +6,7 @@
 ;; Maintainer: Protesilaos Stavrou General Issues <~protesilaos/general-issues@lists.sr.ht>
 ;; URL: https://git.sr.ht/~protesilaos/spacious-padding
 ;; Mailing-List: https://lists.sr.ht/~protesilaos/general-issues
-;; Version: 0.2.0
+;; Version: 0.2.2
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: convenience, focus, writing, presentation
 
@@ -119,11 +119,12 @@ Return 4 if KEY does not have a value."
 
 (defun spacious-padding-set-face-box-padding (face fallback)
   "Return appropriate face attributes for FACE with FALLBACK face background."
-  (list :box
-        (list
-         :line-width (spacious-padding--get-face-width face)
-         :color (face-background face nil fallback)
-         :style nil)))
+  (when (facep face)
+    (list :box
+          (list
+           :line-width (spacious-padding--get-face-width face)
+           :color (face-background face nil fallback)
+           :style nil))))
 
 (defun spacious-padding-set-invisible-dividers (_theme)
   "Make window dividers for THEME invisible."
