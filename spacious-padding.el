@@ -6,7 +6,7 @@
 ;; Maintainer: Protesilaos Stavrou General Issues <~protesilaos/general-issues@lists.sr.ht>
 ;; URL: https://git.sr.ht/~protesilaos/spacious-padding
 ;; Mailing-List: https://lists.sr.ht/~protesilaos/general-issues
-;; Version: 0.2.2
+;; Version: 0.3.0
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: convenience, focus, writing, presentation
 
@@ -31,7 +31,9 @@
 ;; spacing/padding of Emacs windows and frames.  The idea is to make
 ;; editing and reading feel more comfortable.  Enable the
 ;; `spacious-padding-mode'.  Adjust the exact spacing values by
-;; modifying the user option `spacious-padding-widths'.
+;; modifying the user option `spacious-padding-widths'.  To have a
+;; more subtle mode line, with nothing but an overline, configure the
+;; user option `spacious-padding-subtle-mode-line'.
 ;;
 ;; Inspiration for this package comes from Nicolas Rougier's
 ;; impressive designs[1] and Daniel Mendler's `org-modern`
@@ -94,8 +96,8 @@ following:
 Preserve whatever padding is specified in `spacious-padding-widths'.
 
 The value is either a boolean type or a plist.  If it is non-nil,
-use the foreground of the underlying face to derive the color of
-the overline.
+use the foreground of the underlying mode line face to derive the
+color of the overline.
 
 If the non-nil value is a plist read the following keys to
 determine the exact style of the overlines.
@@ -108,15 +110,17 @@ determine the exact style of the overlines.
 Each key accepts either a face or a string representing a color
 as its associated value:
 
-- The face is an unquoted symbol, such as `success' or `shadow'.
+- The face is an unquoted symbol, such as `success' or `shadow',
+  whose `:foreground' attribute is queried to extract the desired
+  color value.
 
 - The color is a name among those listed in the output of the
   command `list-colors-display' or a hexadecimal RGB value, such
   as #123456.
 
 If the key is missing or its value is not one of the above, fall
-back to reading the foreground of the underlying face to
-determine the color of the overline.
+back to reading the foreground of the underlying mode line face
+to determine the color of the overline.
 
 Examples of valid configurations:
 
