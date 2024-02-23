@@ -100,7 +100,7 @@ is always a natural number. Keys are keywords among the following:
   ~spacious-padding-mode~ is enabled. [ The behaviour of preserving
   the border when the width is <= 1 is part of {{{development-version}}}. ]
 
-- ~left-fringe-width~ and ~right-fringe-wdith~ refer to the fringes on
+- ~left-fringe-width~ and ~right-fringe-width~ refer to the fringes on
   each side of the window (the area where line wrapping and other
   indicators are displayed). [ Part of {{{development-version}}}. ]
 
@@ -240,7 +240,9 @@ Everything is in place to set up the package.
          :mode-line-width 6
          :tab-width 4
          :right-divider-width 30
-         :scroll-bar-width 8))
+         :scroll-bar-width 8
+         :left-fringe-width 8
+         :right-fringe-width 8))
 
 ;; Read the doc string of `spacious-padding-subtle-mode-line' as it
 ;; is very flexible and provides several examples.
@@ -267,7 +269,8 @@ help matters.
 
 + Contributions to code or the manual :: Neo Dim.
 
-+ Ideas and/or user feedback :: Damien Cassou, Tomasz Hołubowicz.
++ Ideas and/or user feedback :: Damien Cassou, Nicolas Semrau, Tomasz
+  Hołubowicz.
 
 Inspiration for this package comes from Nicolas Rougier's impressive
 designs and Daniel Mendler's ~org-modern~ package:
