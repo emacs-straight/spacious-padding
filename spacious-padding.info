@@ -1,4 +1,4 @@
-This is docwhcsML.info, produced by makeinfo version 6.8 from
+This is docfJ2bdL.info, produced by makeinfo version 6.8 from
 spacious-padding.texi.
 
 Copyright (C) 2023 Free Software Foundation, Inc.
@@ -20,7 +20,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docwhcsML.info,  Node: Top,  Next: Overview,  Up: (dir)
+File: docfJ2bdL.info,  Node: Top,  Next: Overview,  Up: (dir)
 
 Spacious Padding: Increase the padding/spacing of frames and windows
 ********************************************************************
@@ -98,7 +98,7 @@ Indices
 
 
 
-File: docwhcsML.info,  Node: Overview,  Next: Installation,  Prev: Top,  Up: Top
+File: docfJ2bdL.info,  Node: Overview,  Next: Installation,  Prev: Top,  Up: Top
 
 1 Overview
 **********
@@ -114,7 +114,7 @@ is to produce a more comfortable presentation.
 * Make the mode line subtle::
 
 
-File: docwhcsML.info,  Node: Set the exact spacing values,  Next: Make the mode line subtle,  Up: Overview
+File: docfJ2bdL.info,  Node: Set the exact spacing values,  Next: Make the mode line subtle,  Up: Overview
 
 1.1 Set the exact spacing values
 ================================
@@ -155,7 +155,7 @@ is used).  Keys are keywords among the following:
      to the ‘header-line’, ‘mode-line’, and ‘scroll-bar’, respectively.
 
 
-File: docwhcsML.info,  Node: Make the mode line subtle,  Prev: Set the exact spacing values,  Up: Overview
+File: docfJ2bdL.info,  Node: Make the mode line subtle,  Prev: Set the exact spacing values,  Up: Overview
 
 1.2 Make the mode line subtle
 =============================
@@ -217,7 +217,7 @@ the color of the overline.
            '(:mode-line-active "#0000ff" :mode-line-inactive "gray50"))
 
 
-File: docwhcsML.info,  Node: Installation,  Next: Sample configuration,  Prev: Overview,  Up: Top
+File: docfJ2bdL.info,  Node: Installation,  Next: Sample configuration,  Prev: Overview,  Up: Top
 
 2 Installation
 **************
@@ -228,7 +228,7 @@ File: docwhcsML.info,  Node: Installation,  Next: Sample configuration,  Prev: O
 * Manual installation::
 
 
-File: docwhcsML.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
+File: docfJ2bdL.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
 
 2.1 GNU ELPA package
 ====================
@@ -247,7 +247,7 @@ archive.  Read:
 <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-File: docwhcsML.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
+File: docfJ2bdL.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
 
 2.2 Manual installation
 =======================
@@ -274,14 +274,14 @@ following commands in a shell prompt:
    Everything is in place to set up the package.
 
 
-File: docwhcsML.info,  Node: Sample configuration,  Next: Acknowledgements,  Prev: Installation,  Up: Top
+File: docfJ2bdL.info,  Node: Sample configuration,  Next: Acknowledgements,  Prev: Installation,  Up: Top
 
 3 Sample configuration
 **********************
 
      (require 'spacious-padding)
 
-     ;; These is the default value, but I keep it here for visiibility.
+     ;; These are the default values, but I keep them here for visibility.
      (setq spacious-padding-widths
            '( :internal-border-width 15
               :header-line-width 4
@@ -303,7 +303,7 @@ File: docwhcsML.info,  Node: Sample configuration,  Next: Acknowledgements,  Pre
      (define-key global-map (kbd "<f8>") #'spacious-padding-mode)
 
 
-File: docwhcsML.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Sample configuration,  Up: Top
+File: docfJ2bdL.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Sample configuration,  Up: Top
 
 4 Acknowledgements
 ******************
@@ -329,7 +329,7 @@ designs and Daniel Mendler’s ‘org-modern’ package:
   2. <https://github.com/minad/org-modern>
 
 
-File: docwhcsML.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
+File: docfJ2bdL.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
 
 Appendix A GNU Free Documentation License
 *****************************************
@@ -811,7 +811,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docwhcsML.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
+File: docfJ2bdL.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
 
 B Indices
 *********
@@ -823,7 +823,7 @@ B Indices
 * Concept index::
 
 
-File: docwhcsML.info,  Node: Function index,  Next: Variable index,  Up: Indices
+File: docfJ2bdL.info,  Node: Function index,  Next: Variable index,  Up: Indices
 
 B.1 Function index
 ==================
@@ -834,7 +834,7 @@ B.1 Function index
 * spacious-padding-mode:                 Overview.              (line 6)
 
 
-File: docwhcsML.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
+File: docfJ2bdL.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
 
 B.2 Variable index
 ==================
@@ -848,7 +848,7 @@ B.2 Variable index
                                                                 (line 6)
 
 
-File: docwhcsML.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
+File: docfJ2bdL.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 B.3 Concept index
 =================
@@ -871,12 +871,12 @@ Node: Installation8399
 Node: GNU ELPA package8586
 Node: Manual installation9157
 Node: Sample configuration9966
-Node: Acknowledgements10936
-Node: GNU Free Documentation License11708
-Node: Indices37069
-Node: Function index37245
-Node: Variable index37463
-Node: Concept index37915
+Node: Acknowledgements10939
+Node: GNU Free Documentation License11711
+Node: Indices37072
+Node: Function index37248
+Node: Variable index37466
+Node: Concept index37918
 
 End Tag Table
 
