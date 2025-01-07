@@ -1,7 +1,7 @@
-This is dockypLhU.info, produced by makeinfo version 6.8 from
+This is docNl4HBs.info, produced by makeinfo version 6.8 from
 spacious-padding.texi.
 
-Copyright (C) 2023 Free Software Foundation, Inc.
+Copyright (C) 2023-2025 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
@@ -20,12 +20,12 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: dockypLhU.info,  Node: Top,  Next: Overview,  Up: (dir)
+File: docNl4HBs.info,  Node: Top,  Next: Overview,  Up: (dir)
 
 Spacious Padding: Increase the padding/spacing of frames and windows
 ********************************************************************
 
-Copyright (C) 2023 Free Software Foundation, Inc.
+Copyright (C) 2023-2025 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
@@ -44,11 +44,11 @@ customization options for the Emacs package called ‘spacious-padding’
 information pertinent to it.
 
    The documentation furnished herein corresponds to stable version
-0.5.0, released on 2024-04-29.  Any reference to a newer feature which
+0.6.0, released on 2025-01-06.  Any reference to a newer feature which
 does not yet form part of the latest tagged commit, is explicitly marked
 as such.
 
-   Current development target is 0.6.0-dev.
+   Current development target is 0.7.0-dev.
 
    • Package name (GNU ELPA): ‘spacious-padding’
    • Official manual: <https://protesilaos.com/emacs/spacious-padding>
@@ -98,7 +98,7 @@ Indices
 
 
 
-File: dockypLhU.info,  Node: Overview,  Next: Installation,  Prev: Top,  Up: Top
+File: docNl4HBs.info,  Node: Overview,  Next: Installation,  Prev: Top,  Up: Top
 
 1 Overview
 **********
@@ -114,7 +114,7 @@ is to produce a more comfortable presentation.
 * Make the mode line subtle::
 
 
-File: dockypLhU.info,  Node: Set the exact spacing values,  Next: Make the mode line subtle,  Up: Overview
+File: docNl4HBs.info,  Node: Set the exact spacing values,  Next: Make the mode line subtle,  Up: Overview
 
 1.1 Set the exact spacing values
 ================================
@@ -155,7 +155,7 @@ is used).  Keys are keywords among the following:
      to the ‘header-line’, ‘mode-line’, and ‘scroll-bar’, respectively.
 
 
-File: dockypLhU.info,  Node: Make the mode line subtle,  Prev: Set the exact spacing values,  Up: Overview
+File: docNl4HBs.info,  Node: Make the mode line subtle,  Prev: Set the exact spacing values,  Up: Overview
 
 1.2 Make the mode line subtle
 =============================
@@ -216,8 +216,15 @@ the color of the overline.
      (setq spacious-padding-subtle-mode-line
            '(:mode-line-active "#0000ff" :mode-line-inactive "gray50"))
 
+   [ The following two faces are part of 0.7.0-dev.  ]
+
+   For the convenience of the user, we define the faces
+‘spacious-padding-subtle-mode-line-active’ and
+‘spacious-padding-subtle-mode-line-inactive’, which can be used as
+described above.
+
 
-File: dockypLhU.info,  Node: Installation,  Next: Sample configuration,  Prev: Overview,  Up: Top
+File: docNl4HBs.info,  Node: Installation,  Next: Sample configuration,  Prev: Overview,  Up: Top
 
 2 Installation
 **************
@@ -228,7 +235,7 @@ File: dockypLhU.info,  Node: Installation,  Next: Sample configuration,  Prev: O
 * Manual installation::
 
 
-File: dockypLhU.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
+File: docNl4HBs.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
 
 2.1 GNU ELPA package
 ====================
@@ -247,7 +254,7 @@ archive.  Read:
 <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-File: dockypLhU.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
+File: docNl4HBs.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
 
 2.2 Manual installation
 =======================
@@ -274,7 +281,7 @@ following commands in a shell prompt:
    Everything is in place to set up the package.
 
 
-File: dockypLhU.info,  Node: Sample configuration,  Next: Acknowledgements,  Prev: Installation,  Up: Top
+File: docNl4HBs.info,  Node: Sample configuration,  Next: Acknowledgements,  Prev: Installation,  Up: Top
 
 3 Sample configuration
 **********************
@@ -303,7 +310,7 @@ File: dockypLhU.info,  Node: Sample configuration,  Next: Acknowledgements,  Pre
      (define-key global-map (kbd "<f8>") #'spacious-padding-mode)
 
 
-File: dockypLhU.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Sample configuration,  Up: Top
+File: docNl4HBs.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Sample configuration,  Up: Top
 
 4 Acknowledgements
 ******************
@@ -329,7 +336,7 @@ designs and Daniel Mendler’s ‘org-modern’ package:
   2. <https://github.com/minad/org-modern>
 
 
-File: dockypLhU.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
+File: docNl4HBs.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
 
 Appendix A GNU Free Documentation License
 *****************************************
@@ -811,7 +818,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: dockypLhU.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
+File: docNl4HBs.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
 
 B Indices
 *********
@@ -823,7 +830,7 @@ B Indices
 * Concept index::
 
 
-File: dockypLhU.info,  Node: Function index,  Next: Variable index,  Up: Indices
+File: docNl4HBs.info,  Node: Function index,  Next: Variable index,  Up: Indices
 
 B.1 Function index
 ==================
@@ -834,7 +841,7 @@ B.1 Function index
 * spacious-padding-mode:                 Overview.              (line 6)
 
 
-File: dockypLhU.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
+File: docNl4HBs.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
 
 B.2 Variable index
 ==================
@@ -843,12 +850,16 @@ B.2 Variable index
 * Menu:
 
 * spacious-padding-subtle-mode-line:     Make the mode line subtle.
-                                                                (line 6)
+                                                               (line  6)
+* spacious-padding-subtle-mode-line-active: Make the mode line subtle.
+                                                               (line 64)
+* spacious-padding-subtle-mode-line-inactive: Make the mode line subtle.
+                                                               (line 64)
 * spacious-padding-widths:               Set the exact spacing values.
-                                                                (line 6)
+                                                               (line  6)
 
 
-File: dockypLhU.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
+File: docNl4HBs.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 B.3 Concept index
 =================
@@ -863,20 +874,20 @@ B.3 Concept index
 
 
 Tag Table:
-Node: Top879
-Node: Overview3492
-Node: Set the exact spacing values3933
-Node: Make the mode line subtle5809
-Node: Installation8399
-Node: GNU ELPA package8586
-Node: Manual installation9157
-Node: Sample configuration9966
-Node: Acknowledgements10939
-Node: GNU Free Documentation License11764
-Node: Indices37125
-Node: Function index37301
-Node: Variable index37519
-Node: Concept index37971
+Node: Top884
+Node: Overview3502
+Node: Set the exact spacing values3943
+Node: Make the mode line subtle5819
+Node: Installation8661
+Node: GNU ELPA package8848
+Node: Manual installation9419
+Node: Sample configuration10228
+Node: Acknowledgements11201
+Node: GNU Free Documentation License12026
+Node: Indices37387
+Node: Function index37563
+Node: Variable index37781
+Node: Concept index38523
 
 End Tag Table
 

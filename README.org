@@ -4,9 +4,9 @@
 #+language: en
 #+options: ':t toc:nil author:t email:t num:t
 #+startup: content
-#+macro: stable-version 0.5.0
-#+macro: release-date 2024-04-29
-#+macro: development-version 0.6.0-dev
+#+macro: stable-version 0.6.0
+#+macro: release-date 2025-01-06
+#+macro: development-version 0.7.0-dev
 #+export_file_name: spacious-padding.texi
 #+texinfo_filename: spacious-padding.info
 #+texinfo_dir_category: Emacs misc features
@@ -55,7 +55,7 @@ the GNU ELPA machinery automatically generates an Info manual out of it.
 :CUSTOM_ID: h:40b18bb2-4dc1-4202-bd0b-6fab535b2a0f
 :END:
 
-Copyright (C) 2023  Free Software Foundation, Inc.
+Copyright (C) 2023-2025  Free Software Foundation, Inc.
 
 #+begin_quote
 Permission is granted to copy, distribute and/or modify this document
@@ -181,6 +181,15 @@ Examples of valid configurations:
 (setq spacious-padding-subtle-mode-line
       '(:mode-line-active "#0000ff" :mode-line-inactive "gray50"))
 #+end_src
+
+[ The following two faces are part of {{{development-version}}}. ]
+
+#+vindex: spacious-padding-subtle-mode-line-active
+#+vindex: spacious-padding-subtle-mode-line-inactive
+For the convenience of the user, we define the faces
+~spacious-padding-subtle-mode-line-active~ and
+~spacious-padding-subtle-mode-line-inactive~, which can be used as
+described above.
 
 * Installation
 :PROPERTIES:

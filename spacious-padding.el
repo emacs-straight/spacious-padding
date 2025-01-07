@@ -1,11 +1,11 @@
 ;;; spacious-padding.el --- Increase the padding/spacing of frames and windows -*- lexical-binding: t -*-
 
-;; Copyright (C) 2023-2024  Free Software Foundation, Inc.
+;; Copyright (C) 2023-2025  Free Software Foundation, Inc.
 
 ;; Author: Protesilaos Stavrou <info@protesilaos.com>
 ;; Maintainer: Protesilaos Stavrou <info@protesilaos.com>
 ;; URL: https://github.com/protesilaos/spacious-padding
-;; Version: 0.5.0
+;; Version: 0.6.0
 ;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: convenience, focus, writing, presentation
 
@@ -52,6 +52,18 @@
   "Increase the padding/spacing of frames and windows."
   :group 'faces
   :group 'frames)
+
+;; NOTE 2025-01-06: This is what `use-package' does with its own
+;; theme, so it is probably the right approach for us too.
+(eval-and-compile
+  ;; Declare a synthetic theme for :custom variables.
+  ;; Necessary in order to avoid having those variables saved by custom.el.
+  (deftheme spacious-padding))
+
+(enable-theme 'spacious-padding)
+;; Remove the synthetic spacious-padding theme from the enabled themes, so
+;; iterating over them to "disable all themes" won't disable it.
+(setq custom-enabled-themes (remq 'spacious-padding custom-enabled-themes))
 
 (defcustom spacious-padding-widths
   '( :internal-border-width 15
@@ -115,6 +127,24 @@ When the value is nil, fall back to reasonable defaults."
   :package-version '(spacious-padding . "0.4.0")
   :group 'spacious-padding)
 
+(defface spacious-padding-subtle-mode-line-active
+  '((((class color) (min-colors 88) (background light))
+     :foreground "#0033dd")
+    (((class color) (min-colors 88) (background dark))
+     :foreground "#88aaff"))
+  "Optional face for the active mode line.
+This is something the user can defined per the documentation of
+`spacious-padding-subtle-mode-line'.")
+
+(defface spacious-padding-subtle-mode-line-inactive
+  '((((class color) (min-colors 88) (background light))
+     :foreground "#cfcfcf")
+    (((class color) (min-colors 88) (background dark))
+     :foreground "#585858"))
+  "Optional face for the inactive mode line.
+This is something the user can defined per the documentation of
+`spacious-padding-subtle-mode-line'.")
+
 (defcustom spacious-padding-subtle-mode-line nil
   "Remove the background from the mode lines and add overlines.
 
@@ -168,7 +198,12 @@ Examples of valid configurations:
 
     ;; Use color values directly.
     (setq spacious-padding-subtle-mode-line
-          \\='(:mode-line-active \"#0000ff\" :mode-line-inactive \"gray50\"))"
+          \\='(:mode-line-active \"#0000ff\" :mode-line-inactive \"gray50\"))
+
+For the convenience of the user, we define the faces
+`spacious-padding-subtle-mode-line-active' and
+`spacious-padding-subtle-mode-line-inactive', which can be used as
+described above."
   :type '(choice boolean
                  (plist
                   :key-type (choice (const :mode-line-active)
@@ -288,7 +323,7 @@ hooks that pass one or more arguments to it, such as
         (fg-main (face-foreground 'default))
         custom--inhibit-theme-enable)
     (custom-theme-set-faces
-     'changed
+     'spacious-padding
      `(fringe ((t :background ,bg-main)))
      `(line-number ((t :background ,bg-main)))
      `(header-line ((t ,@(spacious-padding-set-face-box-padding 'header-line 'default))))
@@ -314,7 +349,7 @@ hooks that pass one or more arguments to it, such as
   "Make window dividers for THEME invisible."
   (let (custom--inhibit-theme-enable)
     (custom-theme-set-faces
-     'changed
+     'spacious-padding
      '(fringe (( )))
      '(line-number (( )))
      '(header-line (( )))
