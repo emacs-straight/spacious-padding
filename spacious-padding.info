@@ -1,4 +1,4 @@
-This is docNl4HBs.info, produced by makeinfo version 6.8 from
+This is dochgqj44.info, produced by makeinfo version 6.8 from
 spacious-padding.texi.
 
 Copyright (C) 2023-2025 Free Software Foundation, Inc.
@@ -20,7 +20,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docNl4HBs.info,  Node: Top,  Next: Overview,  Up: (dir)
+File: dochgqj44.info,  Node: Top,  Next: Overview,  Up: (dir)
 
 Spacious Padding: Increase the padding/spacing of frames and windows
 ********************************************************************
@@ -98,7 +98,7 @@ Indices
 
 
 
-File: docNl4HBs.info,  Node: Overview,  Next: Installation,  Prev: Top,  Up: Top
+File: dochgqj44.info,  Node: Overview,  Next: Installation,  Prev: Top,  Up: Top
 
 1 Overview
 **********
@@ -114,7 +114,7 @@ is to produce a more comfortable presentation.
 * Make the mode line subtle::
 
 
-File: docNl4HBs.info,  Node: Set the exact spacing values,  Next: Make the mode line subtle,  Up: Overview
+File: dochgqj44.info,  Node: Set the exact spacing values,  Next: Make the mode line subtle,  Up: Overview
 
 1.1 Set the exact spacing values
 ================================
@@ -155,7 +155,7 @@ is used).  Keys are keywords among the following:
      to the ‘header-line’, ‘mode-line’, and ‘scroll-bar’, respectively.
 
 
-File: docNl4HBs.info,  Node: Make the mode line subtle,  Prev: Set the exact spacing values,  Up: Overview
+File: dochgqj44.info,  Node: Make the mode line subtle,  Prev: Set the exact spacing values,  Up: Overview
 
 1.2 Make the mode line subtle
 =============================
@@ -224,7 +224,7 @@ the color of the overline.
 described above.
 
 
-File: docNl4HBs.info,  Node: Installation,  Next: Sample configuration,  Prev: Overview,  Up: Top
+File: dochgqj44.info,  Node: Installation,  Next: Sample configuration,  Prev: Overview,  Up: Top
 
 2 Installation
 **************
@@ -235,7 +235,7 @@ File: docNl4HBs.info,  Node: Installation,  Next: Sample configuration,  Prev: O
 * Manual installation::
 
 
-File: docNl4HBs.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
+File: dochgqj44.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
 
 2.1 GNU ELPA package
 ====================
@@ -254,7 +254,7 @@ archive.  Read:
 <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-File: docNl4HBs.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
+File: dochgqj44.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
 
 2.2 Manual installation
 =======================
@@ -281,7 +281,7 @@ following commands in a shell prompt:
    Everything is in place to set up the package.
 
 
-File: docNl4HBs.info,  Node: Sample configuration,  Next: Acknowledgements,  Prev: Installation,  Up: Top
+File: dochgqj44.info,  Node: Sample configuration,  Next: Acknowledgements,  Prev: Installation,  Up: Top
 
 3 Sample configuration
 **********************
@@ -310,7 +310,7 @@ File: docNl4HBs.info,  Node: Sample configuration,  Next: Acknowledgements,  Pre
      (define-key global-map (kbd "<f8>") #'spacious-padding-mode)
 
 
-File: docNl4HBs.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Sample configuration,  Up: Top
+File: dochgqj44.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Sample configuration,  Up: Top
 
 4 Acknowledgements
 ******************
@@ -336,7 +336,7 @@ designs and Daniel Mendler’s ‘org-modern’ package:
   2. <https://github.com/minad/org-modern>
 
 
-File: docNl4HBs.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
+File: dochgqj44.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
 
 Appendix A GNU Free Documentation License
 *****************************************
@@ -818,7 +818,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docNl4HBs.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
+File: dochgqj44.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
 
 B Indices
 *********
@@ -830,7 +830,7 @@ B Indices
 * Concept index::
 
 
-File: docNl4HBs.info,  Node: Function index,  Next: Variable index,  Up: Indices
+File: dochgqj44.info,  Node: Function index,  Next: Variable index,  Up: Indices
 
 B.1 Function index
 ==================
@@ -841,7 +841,7 @@ B.1 Function index
 * spacious-padding-mode:                 Overview.              (line 6)
 
 
-File: docNl4HBs.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
+File: dochgqj44.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
 
 B.2 Variable index
 ==================
@@ -859,7 +859,7 @@ B.2 Variable index
                                                                (line  6)
 
 
-File: docNl4HBs.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
+File: dochgqj44.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 B.3 Concept index
 =================
