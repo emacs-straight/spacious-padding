@@ -1,4 +1,4 @@
-This is docEB57Nn.info, produced by makeinfo version 6.8 from
+This is docgcxJdb.info, produced by makeinfo version 6.8 from
 spacious-padding.texi.
 
 Copyright (C) 2023-2025 Free Software Foundation, Inc.
@@ -20,7 +20,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docEB57Nn.info,  Node: Top,  Next: Overview,  Up: (dir)
+File: docgcxJdb.info,  Node: Top,  Next: Overview,  Up: (dir)
 
 Spacious Padding: Increase the padding/spacing of frames and windows
 ********************************************************************
@@ -83,7 +83,7 @@ of it.
 Overview
 
 * Set the exact spacing values::
-* Make the mode line subtle::
+* Make the mode and header lines subtle::
 
 Installation
 
@@ -98,7 +98,7 @@ Indices
 
 
 
-File: docEB57Nn.info,  Node: Overview,  Next: Installation,  Prev: Top,  Up: Top
+File: docgcxJdb.info,  Node: Overview,  Next: Installation,  Prev: Top,  Up: Top
 
 1 Overview
 **********
@@ -111,10 +111,10 @@ is to produce a more comfortable presentation.
 * Menu:
 
 * Set the exact spacing values::
-* Make the mode line subtle::
+* Make the mode and header lines subtle::
 
 
-File: docEB57Nn.info,  Node: Set the exact spacing values,  Next: Make the mode line subtle,  Up: Overview
+File: docgcxJdb.info,  Node: Set the exact spacing values,  Next: Make the mode and header lines subtle,  Up: Overview
 
 1.1 Set the exact spacing values
 ================================
@@ -155,28 +155,42 @@ is used).  Keys are keywords among the following:
      to the ‘header-line’, ‘mode-line’, and ‘scroll-bar’, respectively.
 
 
-File: docEB57Nn.info,  Node: Make the mode line subtle,  Prev: Set the exact spacing values,  Up: Overview
+File: docgcxJdb.info,  Node: Make the mode and header lines subtle,  Prev: Set the exact spacing values,  Up: Overview
 
-1.2 Make the mode line subtle
-=============================
+1.2 Make the mode and header lines subtle
+=========================================
 
-By default, ‘spacious-padding-mode’ does not refashion the mode lines
-other than adding to them some extra padding (*note Set the exact
-spacing values::).  The user option ‘spacious-padding-subtle-mode-line’
-does change the mode lines so that instead of a background they only
-have an overline, while preserving whatever padding is in effect.
+[ As part of 0.8.0-dev, the user option is now called
+‘spacious-padding-subtle-frame-lines’ instead of
+‘spacious-padding-subtle-mode-line’.  Header line faces are covered as
+well.  ]
 
-   The value bound to ‘spacious-padding-subtle-mode-line’ is either a
-boolean type or a plist.  If it is non-nil, use the foreground of the
-underlying mode line face to derive the color of the overline.
+   By default, ‘spacious-padding-mode’ does not refashion the mode lines
+or header lines other than adding to them some extra padding (*note Set
+the exact spacing values::).  The user option
+‘spacious-padding-subtle-frame-lines’ does change the mode lines so that
+instead of a background they only have an overline or underlineq, while
+preserving whatever padding is in effect.
 
-   If the non-nil value is a plist read the following keys to determine
-the exact style of the overlines.
+   The value bound to ‘spacious-padding-subtle-frame-lines’ is either a
+boolean type or a plist.
+
+   If it is simply non-nil, ‘spacious-padding-mode’ will use the
+foreground of the underlying frame line face (e.g.  ‘mode-line-active’)
+to derive the color of the overline or underline.
+
+   If the non-nil value is a plist in particular,
+‘spacious-padding-mode’ reads the following keys to determine the exact
+style of the overlines or underlines.
 
    • ‘:mode-line-active’ refers to the active/current mode line.
-
    • ‘:mode-line-inactive’ refers to the inactive/non-current mode
      lines.
+   • ‘:header-line-active’ refers to the active header line.
+   • ‘:header-line-inactive’ refers to the inactive header lines.  The
+     distinction between active and inactive header lines only applies
+     to Emacs version 31 or higher.  Earlier versions treat all header
+     lines the same.
 
    Each key accepts either a face or a string representing a color as
 its associated value:
@@ -198,31 +212,42 @@ the color of the overline.
      ;; Use the foreground of the underlying mode line face to determine
      ;; the color of the overline (e.g. the inactive mode line has gray
      ;; text, so render the overline in the same gray).
-     (setq spacious-padding-subtle-mode-line t)
+     (setq spacious-padding-subtle-frame-lines t)
 
      ;; Use the foreground of the `error' face (typically a red hue) for
      ;; the active mode line's overline.  For the inactive mode line, fall
      ;; back to the foreground color of the underlying face (as in the case
      ;; of the t shown above).
-     (setq spacious-padding-subtle-mode-line
+     (setq spacious-padding-subtle-frame-lines
            '(:mode-line-active error))
 
      ;; As above, but now use the foreground of the `shadow' face for the
      ;; inactive mode line.
-     (setq spacious-padding-subtle-mode-line
+     (setq spacious-padding-subtle-frame-lines
            '(:mode-line-active error :mode-line-inactive shadow))
 
      ;; Use color values directly.
-     (setq spacious-padding-subtle-mode-line
+     (setq spacious-padding-subtle-frame-lines
            '(:mode-line-active "#0000ff" :mode-line-inactive "gray50"))
 
+     ;; A complete example with all the keys currently available.
+     (setq spacious-padding-subtle-frame-lines
+           '( :mode-line-active spacious-padding-line-active
+              :mode-line-inactive spacious-padding-line-inactive
+              :header-line-active spacious-padding-line-active
+              :header-line-inactive spacious-padding-line-inactive))
+
    For the convenience of the user, we define the faces
-‘spacious-padding-subtle-mode-line-active’ and
-‘spacious-padding-subtle-mode-line-inactive’, which can be used as
-described above.
+‘spacious-padding-line-active’ and ‘spacious-paddinge-line-inactive’,
+which can be used as described above.  [ These faces are the new names
+of the now-obsolete ‘spacious-padding-subtle-mode-line-active’ and
+‘spacious-padding-subtle-mode-line-inactive’ as part of 0.8.0-dev.  ]
+
+   For optimal results with underlines, set
+‘x-underline-at-descent-line’ to a non-nil value.
 
 
-File: docEB57Nn.info,  Node: Installation,  Next: Sample configuration,  Prev: Overview,  Up: Top
+File: docgcxJdb.info,  Node: Installation,  Next: Sample configuration,  Prev: Overview,  Up: Top
 
 2 Installation
 **************
@@ -233,7 +258,7 @@ File: docEB57Nn.info,  Node: Installation,  Next: Sample configuration,  Prev: O
 * Manual installation::
 
 
-File: docEB57Nn.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
+File: docgcxJdb.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
 
 2.1 GNU ELPA package
 ====================
@@ -252,7 +277,7 @@ archive.  Read:
 <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-File: docEB57Nn.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
+File: docgcxJdb.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
 
 2.2 Manual installation
 =======================
@@ -279,7 +304,7 @@ following commands in a shell prompt:
    Everything is in place to set up the package.
 
 
-File: docEB57Nn.info,  Node: Sample configuration,  Next: Acknowledgements,  Prev: Installation,  Up: Top
+File: docgcxJdb.info,  Node: Sample configuration,  Next: Acknowledgements,  Prev: Installation,  Up: Top
 
 3 Sample configuration
 **********************
@@ -298,9 +323,13 @@ File: docEB57Nn.info,  Node: Sample configuration,  Next: Acknowledgements,  Pre
 
      ;; Read the doc string of `spacious-padding-subtle-mode-line' as it
      ;; is very flexible and provides several examples.
-     (setq spacious-padding-subtle-mode-line
+     (setq spacious-padding-subtle-frame-lines
            `( :mode-line-active 'default
               :mode-line-inactive vertical-border))
+
+     ;; Make the underlines appear below the base line, to create a more
+     ;; consistent effect between overlines and underlines.
+     (setq x-underline-at-descent-line t)
 
      (spacious-padding-mode 1)
 
@@ -308,7 +337,7 @@ File: docEB57Nn.info,  Node: Sample configuration,  Next: Acknowledgements,  Pre
      (define-key global-map (kbd "<f8>") #'spacious-padding-mode)
 
 
-File: docEB57Nn.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Sample configuration,  Up: Top
+File: docgcxJdb.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Sample configuration,  Up: Top
 
 4 Acknowledgements
 ******************
@@ -334,7 +363,7 @@ designs and Daniel Mendler’s ‘org-modern’ package:
   2. <https://github.com/minad/org-modern>
 
 
-File: docEB57Nn.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
+File: docgcxJdb.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
 
 Appendix A GNU Free Documentation License
 *****************************************
@@ -816,7 +845,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docEB57Nn.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
+File: docgcxJdb.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
 
 B Indices
 *********
@@ -828,7 +857,7 @@ B Indices
 * Concept index::
 
 
-File: docEB57Nn.info,  Node: Function index,  Next: Variable index,  Up: Indices
+File: docgcxJdb.info,  Node: Function index,  Next: Variable index,  Up: Indices
 
 B.1 Function index
 ==================
@@ -839,7 +868,7 @@ B.1 Function index
 * spacious-padding-mode:                 Overview.              (line 6)
 
 
-File: docEB57Nn.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
+File: docgcxJdb.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
 
 B.2 Variable index
 ==================
@@ -847,17 +876,17 @@ B.2 Variable index
  [index ]
 * Menu:
 
-* spacious-padding-subtle-mode-line:     Make the mode line subtle.
-                                                               (line  6)
-* spacious-padding-subtle-mode-line-active: Make the mode line subtle.
-                                                               (line 62)
-* spacious-padding-subtle-mode-line-inactive: Make the mode line subtle.
-                                                               (line 62)
+* spacious-padding-line-active:          Make the mode and header lines subtle.
+                                                               (line 83)
+* spacious-padding-line-inactive:        Make the mode and header lines subtle.
+                                                               (line 83)
+* spacious-padding-subtle-frame-lines:   Make the mode and header lines subtle.
+                                                               (line 11)
 * spacious-padding-widths:               Set the exact spacing values.
                                                                (line  6)
 
 
-File: docEB57Nn.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
+File: docgcxJdb.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 B.3 Concept index
 =================
@@ -873,19 +902,19 @@ B.3 Concept index
 
 Tag Table:
 Node: Top884
-Node: Overview3502
-Node: Set the exact spacing values3943
-Node: Make the mode line subtle5819
-Node: Installation8605
-Node: GNU ELPA package8792
-Node: Manual installation9363
-Node: Sample configuration10172
-Node: Acknowledgements11145
-Node: GNU Free Documentation License11981
-Node: Indices37342
-Node: Function index37518
-Node: Variable index37736
-Node: Concept index38478
+Node: Overview3514
+Node: Set the exact spacing values3967
+Node: Make the mode and header lines subtle5855
+Node: Installation9992
+Node: GNU ELPA package10179
+Node: Manual installation10750
+Node: Sample configuration11559
+Node: Acknowledgements12710
+Node: GNU Free Documentation License13546
+Node: Indices38907
+Node: Function index39083
+Node: Variable index39301
+Node: Concept index40071
 
 End Tag Table
 
