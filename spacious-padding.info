@@ -1,4 +1,4 @@
-This is docIgUoKj.info, produced by makeinfo version 6.8 from
+This is docj0IR6f.info, produced by makeinfo version 6.8 from
 spacious-padding.texi.
 
 Copyright (C) 2023-2025 Free Software Foundation, Inc.
@@ -20,7 +20,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docIgUoKj.info,  Node: Top,  Next: Overview,  Up: (dir)
+File: docj0IR6f.info,  Node: Top,  Next: Overview,  Up: (dir)
 
 Spacious Padding: Increase the padding/spacing of frames and windows
 ********************************************************************
@@ -98,7 +98,7 @@ Indices
 
 
 
-File: docIgUoKj.info,  Node: Overview,  Next: Installation,  Prev: Top,  Up: Top
+File: docj0IR6f.info,  Node: Overview,  Next: Installation,  Prev: Top,  Up: Top
 
 1 Overview
 **********
@@ -114,7 +114,7 @@ is to produce a more comfortable presentation.
 * Make the mode and header lines subtle::
 
 
-File: docIgUoKj.info,  Node: Set the exact spacing values,  Next: Make the mode and header lines subtle,  Up: Overview
+File: docj0IR6f.info,  Node: Set the exact spacing values,  Next: Make the mode and header lines subtle,  Up: Overview
 
 1.1 Set the exact spacing values
 ================================
@@ -155,7 +155,7 @@ is used).  Keys are keywords among the following:
      to the ‘header-line’, ‘mode-line’, and ‘scroll-bar’, respectively.
 
 
-File: docIgUoKj.info,  Node: Make the mode and header lines subtle,  Prev: Set the exact spacing values,  Up: Overview
+File: docj0IR6f.info,  Node: Make the mode and header lines subtle,  Prev: Set the exact spacing values,  Up: Overview
 
 1.2 Make the mode and header lines subtle
 =========================================
@@ -243,11 +243,8 @@ which can be used as described above.  [ These faces are the new names
 of the now-obsolete ‘spacious-padding-subtle-mode-line-active’ and
 ‘spacious-padding-subtle-mode-line-inactive’ as part of 0.8.0-dev.  ]
 
-   For optimal results with underlines, set
-‘x-underline-at-descent-line’ to a non-nil value.
-
 
-File: docIgUoKj.info,  Node: Installation,  Next: Sample configuration,  Prev: Overview,  Up: Top
+File: docj0IR6f.info,  Node: Installation,  Next: Sample configuration,  Prev: Overview,  Up: Top
 
 2 Installation
 **************
@@ -258,7 +255,7 @@ File: docIgUoKj.info,  Node: Installation,  Next: Sample configuration,  Prev: O
 * Manual installation::
 
 
-File: docIgUoKj.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
+File: docj0IR6f.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
 
 2.1 GNU ELPA package
 ====================
@@ -277,7 +274,7 @@ archive.  Read:
 <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-File: docIgUoKj.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
+File: docj0IR6f.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
 
 2.2 Manual installation
 =======================
@@ -304,7 +301,7 @@ following commands in a shell prompt:
    Everything is in place to set up the package.
 
 
-File: docIgUoKj.info,  Node: Sample configuration,  Next: Acknowledgements,  Prev: Installation,  Up: Top
+File: docj0IR6f.info,  Node: Sample configuration,  Next: Acknowledgements,  Prev: Installation,  Up: Top
 
 3 Sample configuration
 **********************
@@ -327,17 +324,13 @@ File: docIgUoKj.info,  Node: Sample configuration,  Next: Acknowledgements,  Pre
            `( :mode-line-active 'default
               :mode-line-inactive vertical-border))
 
-     ;; Make the underlines appear below the base line, to create a more
-     ;; consistent effect between overlines and underlines.
-     (setq x-underline-at-descent-line t)
-
      (spacious-padding-mode 1)
 
      ;; Set a key binding if you need to toggle spacious padding.
      (define-key global-map (kbd "<f8>") #'spacious-padding-mode)
 
 
-File: docIgUoKj.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Sample configuration,  Up: Top
+File: docj0IR6f.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Sample configuration,  Up: Top
 
 4 Acknowledgements
 ******************
@@ -349,7 +342,8 @@ Author/maintainer
      Protesilaos Stavrou.
 
 Contributions to code or the manual
-     Lucas Gruss, Martin Marshall, Neo Dim, Ruby Iris Juric.
+     Lucas Gruss, Martin Marshall, Neo Dim, Ruby Iris Juric, Steven
+     Allen.
 
 Ideas and/or user feedback
      Aronne Raimondi, Chinmay Dalal, Damien Cassou, Julian Flake, Lou
@@ -364,7 +358,7 @@ designs and Daniel Mendler’s ‘org-modern’ package:
   2. <https://github.com/minad/org-modern>
 
 
-File: docIgUoKj.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
+File: docj0IR6f.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
 
 Appendix A GNU Free Documentation License
 *****************************************
@@ -846,7 +840,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docIgUoKj.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
+File: docj0IR6f.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
 
 B Indices
 *********
@@ -858,7 +852,7 @@ B Indices
 * Concept index::
 
 
-File: docIgUoKj.info,  Node: Function index,  Next: Variable index,  Up: Indices
+File: docj0IR6f.info,  Node: Function index,  Next: Variable index,  Up: Indices
 
 B.1 Function index
 ==================
@@ -869,7 +863,7 @@ B.1 Function index
 * spacious-padding-mode:                 Overview.              (line 6)
 
 
-File: docIgUoKj.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
+File: docj0IR6f.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
 
 B.2 Variable index
 ==================
@@ -887,7 +881,7 @@ B.2 Variable index
                                                                (line  6)
 
 
-File: docIgUoKj.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
+File: docj0IR6f.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 B.3 Concept index
 =================
@@ -906,16 +900,16 @@ Node: Top884
 Node: Overview3514
 Node: Set the exact spacing values3967
 Node: Make the mode and header lines subtle5855
-Node: Installation9992
-Node: GNU ELPA package10179
-Node: Manual installation10750
-Node: Sample configuration11559
-Node: Acknowledgements12710
-Node: GNU Free Documentation License13566
-Node: Indices38927
-Node: Function index39103
-Node: Variable index39321
-Node: Concept index40091
+Node: Installation9893
+Node: GNU ELPA package10080
+Node: Manual installation10651
+Node: Sample configuration11460
+Node: Acknowledgements12435
+Node: GNU Free Documentation License13310
+Node: Indices38671
+Node: Function index38847
+Node: Variable index39065
+Node: Concept index39835
 
 End Tag Table
 
