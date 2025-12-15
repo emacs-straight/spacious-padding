@@ -4,9 +4,9 @@
 #+language: en
 #+options: ':t toc:nil author:t email:t num:t
 #+startup: content
-#+macro: stable-version 0.7.0
-#+macro: release-date 2025-06-01
-#+macro: development-version 0.8.0-dev
+#+macro: stable-version 0.8.0
+#+macro: release-date 2025-12-13
+#+macro: development-version 0.9.0-dev
 #+export_file_name: spacious-padding.texi
 #+texinfo_filename: spacious-padding.info
 #+texinfo_dir_category: Emacs misc features
@@ -69,6 +69,87 @@ included in the section entitled “GNU Free Documentation License.”
 modify this GNU manual.”
 #+end_quote
 
+* Installation
+:PROPERTIES:
+:CUSTOM_ID: h:f3bdac2c-4704-4a51-948c-a789a2589790
+:END:
+#+cindex: Installation instructions
+
+** GNU ELPA package
+:PROPERTIES:
+:CUSTOM_ID: h:42953f87-82bd-43ec-ab99-22b1e22955e7
+:END:
+
+The package is available as ~spacious-padding~.  Simply do:
+
+: M-x package-refresh-contents
+: M-x package-install
+
+And search for it.
+
+GNU ELPA provides the latest stable release.  Those who prefer to follow
+the development process in order to report bugs or suggest changes, can
+use the version of the package from the GNU-devel ELPA archive.  Read:
+https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/.
+
+** Manual installation
+:PROPERTIES:
+:CUSTOM_ID: h:d397712c-c8c0-4cfa-ad1a-ef28cf78d1f0
+:END:
+
+Assuming your Emacs files are found in =~/.emacs.d/=, execute the
+following commands in a shell prompt:
+
+#+begin_src sh
+cd ~/.emacs.d
+
+# Create a directory for manually-installed packages
+mkdir manual-packages
+
+# Go to the new directory
+cd manual-packages
+
+# Clone this repo, naming it "spacious-padding"
+git clone https://git.sr.ht/~protesilaos/spacious-padding spacious-padding
+#+end_src
+
+Finally, in your =init.el= (or equivalent) evaluate this:
+
+#+begin_src emacs-lisp
+;; Make Elisp files in that directory available to the user.
+(add-to-list 'load-path "~/.emacs.d/manual-packages/spacious-padding")
+#+end_src
+
+Everything is in place to set up the package.
+
+* Sample configuration
+:PROPERTIES:
+:CUSTOM_ID: h:5d16932d-4f7b-493d-8e6a-e5c396b15fd6
+:END:
+#+cindex: Package configuration
+
+#+begin_src emacs-lisp
+(use-package spacious-padding
+  :ensure t
+  :config
+  ;; These are the default values, but I keep them here for visibility.
+  ;; Also check `spacious-padding-subtle-frame-lines'.
+  (setq spacious-padding-widths
+        '( :internal-border-width 15
+           :header-line-width 4
+           :mode-line-width 6
+           :custom-button-width 3
+           :tab-width 4
+           :right-divider-width 30
+           :scroll-bar-width 8
+           :fringe-width 8))
+
+  (spacious-padding-mode 1)
+
+  ;; Set a key binding if you need to toggle spacious padding.
+  (define-key global-map (kbd "<f8>") #'spacious-padding-mode))
+#+end_src
+
 * Overview
 :PROPERTIES:
 :CUSTOM_ID: h:ea728ce0-d319-4054-b8ee-5109a316c795
@@ -122,16 +203,12 @@ value is used). Keys are keywords among the following:
   the ~header-line~, ~mode-line~, and ~scroll-bar~, respectively.
 
 - ~:custom-button-width~ is for all buttons shown in the Custom User
-  Interface and related. [ Part of {{{development-version}}}. ]
+  Interface and related.
 
 ** Make the mode and header lines subtle
 :PROPERTIES:
 :CUSTOM_ID: h:cffe3c7e-9f67-4147-8ada-edfcc4cf979e
 :END:
-
-[ As part of {{{development-version}}}, the user option is now called
-  ~spacious-padding-subtle-frame-lines~ instead of ~spacious-padding-subtle-mode-line~.
-  Header line faces are covered as well. ]
 
 #+vindex: spacious-padding-subtle-frame-lines
 By default, ~spacious-padding-mode~ does not refashion the mode lines
@@ -208,97 +285,11 @@ Examples of valid configurations:
 #+vindex: spacious-padding-line-inactive
 For the convenience of the user, we define the faces
 ~spacious-padding-line-active~ and ~spacious-paddinge-line-inactive~,
-which can be used as described above. [ These faces are the new names
-of the now-obsolete ~spacious-padding-subtle-mode-line-active~ and
-~spacious-padding-subtle-mode-line-inactive~ as part of {{{development-version}}}. ]
+which can be used as described above.
 
 Users of Emacs 28 need to set ~x-underline-at-descent-line~ to a non-nil
 value to get the desired spacing with the underlines.  Newer versions of
 Emacs give us control of this attribute at the level of the individual face.
-
-* Installation
-:PROPERTIES:
-:CUSTOM_ID: h:f3bdac2c-4704-4a51-948c-a789a2589790
-:END:
-#+cindex: Installation instructions
-
-** GNU ELPA package
-:PROPERTIES:
-:CUSTOM_ID: h:42953f87-82bd-43ec-ab99-22b1e22955e7
-:END:
-
-The package is available as ~spacious-padding~.  Simply do:
-
-: M-x package-refresh-contents
-: M-x package-install
-
-And search for it.
-
-GNU ELPA provides the latest stable release.  Those who prefer to follow
-the development process in order to report bugs or suggest changes, can
-use the version of the package from the GNU-devel ELPA archive.  Read:
-https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/.
-
-** Manual installation
-:PROPERTIES:
-:CUSTOM_ID: h:d397712c-c8c0-4cfa-ad1a-ef28cf78d1f0
-:END:
-
-Assuming your Emacs files are found in =~/.emacs.d/=, execute the
-following commands in a shell prompt:
-
-#+begin_src sh
-cd ~/.emacs.d
-
-# Create a directory for manually-installed packages
-mkdir manual-packages
-
-# Go to the new directory
-cd manual-packages
-
-# Clone this repo, naming it "spacious-padding"
-git clone https://git.sr.ht/~protesilaos/spacious-padding spacious-padding
-#+end_src
-
-Finally, in your =init.el= (or equivalent) evaluate this:
-
-#+begin_src emacs-lisp
-;; Make Elisp files in that directory available to the user.
-(add-to-list 'load-path "~/.emacs.d/manual-packages/spacious-padding")
-#+end_src
-
-Everything is in place to set up the package.
-
-* Sample configuration
-:PROPERTIES:
-:CUSTOM_ID: h:5d16932d-4f7b-493d-8e6a-e5c396b15fd6
-:END:
-#+cindex: Package configuration
-
-#+begin_src emacs-lisp
-(require 'spacious-padding)
-
-;; These are the default values, but I keep them here for visibility.
-(setq spacious-padding-widths
-      '( :internal-border-width 15
-         :header-line-width 4
-         :mode-line-width 6
-         :tab-width 4
-         :right-divider-width 30
-         :scroll-bar-width 8
-         :fringe-width 8))
-
-;; Read the doc string of `spacious-padding-subtle-mode-line' as it
-;; is very flexible and provides several examples.
-(setq spacious-padding-subtle-frame-lines
-      `( :mode-line-active 'default
-         :mode-line-inactive vertical-border))
-
-(spacious-padding-mode 1)
-
-;; Set a key binding if you need to toggle spacious padding.
-(define-key global-map (kbd "<f8>") #'spacious-padding-mode)
-#+end_src
 
 * Acknowledgements
 :PROPERTIES:

@@ -1,4 +1,4 @@
-This is docqZ0QMb.info, produced by makeinfo version 7.1.1 from
+This is docd239yx.info, produced by makeinfo version 7.1.1 from
 spacious-padding.texi.
 
 Copyright (C) 2023-2025 Free Software Foundation, Inc.
@@ -20,7 +20,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docqZ0QMb.info,  Node: Top,  Next: Overview,  Up: (dir)
+File: docd239yx.info,  Node: Top,  Next: Installation,  Up: (dir)
 
 Spacious Padding: Increase the padding/spacing of frames and windows
 ********************************************************************
@@ -44,11 +44,11 @@ customization options for the Emacs package called ‘spacious-padding’
 information pertinent to it.
 
    The documentation furnished herein corresponds to stable version
-0.7.0, released on 2025-06-01.  Any reference to a newer feature which
+0.8.0, released on 2025-12-13.  Any reference to a newer feature which
 does not yet form part of the latest tagged commit, is explicitly marked
 as such.
 
-   Current development target is 0.8.0-dev.
+   Current development target is 0.9.0-dev.
 
    • Package name (GNU ELPA): ‘spacious-padding’
    • Official manual: <https://protesilaos.com/emacs/spacious-padding>
@@ -71,24 +71,24 @@ of it.
 
 * Menu:
 
-* Overview::
 * Installation::
 * Sample configuration::
+* Overview::
 * Acknowledgements::
 * GNU Free Documentation License::
 * Indices::
 
 -- The Detailed Node Listing --
 
-Overview
-
-* Set the exact spacing values::
-* Make the mode and header lines subtle::
-
 Installation
 
 * GNU ELPA package::
 * Manual installation::
+
+Overview
+
+* Set the exact spacing values::
+* Make the mode and header lines subtle::
 
 Indices
 
@@ -98,9 +98,92 @@ Indices
 
 
 
-File: docqZ0QMb.info,  Node: Overview,  Next: Installation,  Prev: Top,  Up: Top
+File: docd239yx.info,  Node: Installation,  Next: Sample configuration,  Prev: Top,  Up: Top
 
-1 Overview
+1 Installation
+**************
+
+* Menu:
+
+* GNU ELPA package::
+* Manual installation::
+
+
+File: docd239yx.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
+
+1.1 GNU ELPA package
+====================
+
+The package is available as ‘spacious-padding’.  Simply do:
+
+     M-x package-refresh-contents
+     M-x package-install
+
+   And search for it.
+
+   GNU ELPA provides the latest stable release.  Those who prefer to
+follow the development process in order to report bugs or suggest
+changes, can use the version of the package from the GNU-devel ELPA
+archive.  Read:
+<https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
+
+
+File: docd239yx.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
+
+1.2 Manual installation
+=======================
+
+Assuming your Emacs files are found in ‘~/.emacs.d/’, execute the
+following commands in a shell prompt:
+
+     cd ~/.emacs.d
+
+     # Create a directory for manually-installed packages
+     mkdir manual-packages
+
+     # Go to the new directory
+     cd manual-packages
+
+     # Clone this repo, naming it "spacious-padding"
+     git clone https://git.sr.ht/~protesilaos/spacious-padding spacious-padding
+
+   Finally, in your ‘init.el’ (or equivalent) evaluate this:
+
+     ;; Make Elisp files in that directory available to the user.
+     (add-to-list 'load-path "~/.emacs.d/manual-packages/spacious-padding")
+
+   Everything is in place to set up the package.
+
+
+File: docd239yx.info,  Node: Sample configuration,  Next: Overview,  Prev: Installation,  Up: Top
+
+2 Sample configuration
+**********************
+
+     (use-package spacious-padding
+       :ensure t
+       :config
+       ;; These are the default values, but I keep them here for visibility.
+       ;; Also check `spacious-padding-subtle-frame-lines'.
+       (setq spacious-padding-widths
+             '( :internal-border-width 15
+                :header-line-width 4
+                :mode-line-width 6
+                :custom-button-width 3
+                :tab-width 4
+                :right-divider-width 30
+                :scroll-bar-width 8
+                :fringe-width 8))
+
+       (spacious-padding-mode 1)
+
+       ;; Set a key binding if you need to toggle spacious padding.
+       (define-key global-map (kbd "<f8>") #'spacious-padding-mode))
+
+
+File: docd239yx.info,  Node: Overview,  Next: Acknowledgements,  Prev: Sample configuration,  Up: Top
+
+3 Overview
 **********
 
 The ‘spacious-padding-mode’ increases the space or padding around
@@ -114,9 +197,9 @@ is to produce a more comfortable presentation.
 * Make the mode and header lines subtle::
 
 
-File: docqZ0QMb.info,  Node: Set the exact spacing values,  Next: Make the mode and header lines subtle,  Up: Overview
+File: docd239yx.info,  Node: Set the exact spacing values,  Next: Make the mode and header lines subtle,  Up: Overview
 
-1.1 Set the exact spacing values
+3.1 Set the exact spacing values
 ================================
 
 The user option ‘spacious-padding-widths’ defines the values associated
@@ -155,22 +238,17 @@ is used).  Keys are keywords among the following:
      to the ‘header-line’, ‘mode-line’, and ‘scroll-bar’, respectively.
 
    • ‘:custom-button-width’ is for all buttons shown in the Custom User
-     Interface and related.  [ Part of 0.8.0-dev.  ]
+     Interface and related.
 
 
-File: docqZ0QMb.info,  Node: Make the mode and header lines subtle,  Prev: Set the exact spacing values,  Up: Overview
+File: docd239yx.info,  Node: Make the mode and header lines subtle,  Prev: Set the exact spacing values,  Up: Overview
 
-1.2 Make the mode and header lines subtle
+3.2 Make the mode and header lines subtle
 =========================================
 
-[ As part of 0.8.0-dev, the user option is now called
-‘spacious-padding-subtle-frame-lines’ instead of
-‘spacious-padding-subtle-mode-line’.  Header line faces are covered as
-well.  ]
-
-   By default, ‘spacious-padding-mode’ does not refashion the mode lines
-or header lines other than adding to them some extra padding (*note Set
-the exact spacing values::).  The user option
+By default, ‘spacious-padding-mode’ does not refashion the mode lines or
+header lines other than adding to them some extra padding (*note Set the
+exact spacing values::).  The user option
 ‘spacious-padding-subtle-frame-lines’ does change the mode lines so that
 instead of a background they only have an overline or underlineq, while
 preserving whatever padding is in effect.
@@ -242,9 +320,7 @@ the color of the overline.
 
    For the convenience of the user, we define the faces
 ‘spacious-padding-line-active’ and ‘spacious-paddinge-line-inactive’,
-which can be used as described above.  [ These faces are the new names
-of the now-obsolete ‘spacious-padding-subtle-mode-line-active’ and
-‘spacious-padding-subtle-mode-line-inactive’ as part of 0.8.0-dev.  ]
+which can be used as described above.
 
    Users of Emacs 28 need to set ‘x-underline-at-descent-line’ to a
 non-nil value to get the desired spacing with the underlines.  Newer
@@ -252,93 +328,7 @@ versions of Emacs give us control of this attribute at the level of the
 individual face.
 
 
-File: docqZ0QMb.info,  Node: Installation,  Next: Sample configuration,  Prev: Overview,  Up: Top
-
-2 Installation
-**************
-
-* Menu:
-
-* GNU ELPA package::
-* Manual installation::
-
-
-File: docqZ0QMb.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
-
-2.1 GNU ELPA package
-====================
-
-The package is available as ‘spacious-padding’.  Simply do:
-
-     M-x package-refresh-contents
-     M-x package-install
-
-   And search for it.
-
-   GNU ELPA provides the latest stable release.  Those who prefer to
-follow the development process in order to report bugs or suggest
-changes, can use the version of the package from the GNU-devel ELPA
-archive.  Read:
-<https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
-
-
-File: docqZ0QMb.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
-
-2.2 Manual installation
-=======================
-
-Assuming your Emacs files are found in ‘~/.emacs.d/’, execute the
-following commands in a shell prompt:
-
-     cd ~/.emacs.d
-
-     # Create a directory for manually-installed packages
-     mkdir manual-packages
-
-     # Go to the new directory
-     cd manual-packages
-
-     # Clone this repo, naming it "spacious-padding"
-     git clone https://git.sr.ht/~protesilaos/spacious-padding spacious-padding
-
-   Finally, in your ‘init.el’ (or equivalent) evaluate this:
-
-     ;; Make Elisp files in that directory available to the user.
-     (add-to-list 'load-path "~/.emacs.d/manual-packages/spacious-padding")
-
-   Everything is in place to set up the package.
-
-
-File: docqZ0QMb.info,  Node: Sample configuration,  Next: Acknowledgements,  Prev: Installation,  Up: Top
-
-3 Sample configuration
-**********************
-
-     (require 'spacious-padding)
-
-     ;; These are the default values, but I keep them here for visibility.
-     (setq spacious-padding-widths
-           '( :internal-border-width 15
-              :header-line-width 4
-              :mode-line-width 6
-              :tab-width 4
-              :right-divider-width 30
-              :scroll-bar-width 8
-              :fringe-width 8))
-
-     ;; Read the doc string of `spacious-padding-subtle-mode-line' as it
-     ;; is very flexible and provides several examples.
-     (setq spacious-padding-subtle-frame-lines
-           `( :mode-line-active 'default
-              :mode-line-inactive vertical-border))
-
-     (spacious-padding-mode 1)
-
-     ;; Set a key binding if you need to toggle spacious padding.
-     (define-key global-map (kbd "<f8>") #'spacious-padding-mode)
-
-
-File: docqZ0QMb.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Sample configuration,  Up: Top
+File: docd239yx.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Overview,  Up: Top
 
 4 Acknowledgements
 ******************
@@ -366,7 +356,7 @@ designs and Daniel Mendler's ‘org-modern’ package:
   2. <https://github.com/minad/org-modern>
 
 
-File: docqZ0QMb.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
+File: docd239yx.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
 
 Appendix A GNU Free Documentation License
 *****************************************
@@ -848,7 +838,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docqZ0QMb.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
+File: docd239yx.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
 
 B Indices
 *********
@@ -860,7 +850,7 @@ B Indices
 * Concept index::
 
 
-File: docqZ0QMb.info,  Node: Function index,  Next: Variable index,  Up: Indices
+File: docd239yx.info,  Node: Function index,  Next: Variable index,  Up: Indices
 
 B.1 Function index
 ==================
@@ -871,7 +861,7 @@ B.1 Function index
 * spacious-padding-mode:                 Overview.              (line 6)
 
 
-File: docqZ0QMb.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
+File: docd239yx.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
 
 B.2 Variable index
 ==================
@@ -880,16 +870,16 @@ B.2 Variable index
 * Menu:
 
 * spacious-padding-line-active:          Make the mode and header lines subtle.
-                                                               (line 83)
+                                                               (line 78)
 * spacious-padding-line-inactive:        Make the mode and header lines subtle.
-                                                               (line 83)
+                                                               (line 78)
 * spacious-padding-subtle-frame-lines:   Make the mode and header lines subtle.
-                                                               (line 11)
+                                                               (line  6)
 * spacious-padding-widths:               Set the exact spacing values.
                                                                (line  6)
 
 
-File: docqZ0QMb.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
+File: docd239yx.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 B.3 Concept index
 =================
@@ -905,19 +895,19 @@ B.3 Concept index
 
 Tag Table:
 Node: Top886
-Node: Overview3514
-Node: Set the exact spacing values3967
-Node: Make the mode and header lines subtle5987
-Node: Installation10256
-Node: GNU ELPA package10443
-Node: Manual installation11014
-Node: Sample configuration11823
-Node: Acknowledgements12798
-Node: GNU Free Documentation License13692
-Node: Indices38852
-Node: Function index39028
-Node: Variable index39246
-Node: Concept index40016
+Node: Installation3518
+Node: GNU ELPA package3700
+Node: Manual installation4271
+Node: Sample configuration5080
+Node: Overview5934
+Node: Set the exact spacing values6408
+Node: Make the mode and header lines subtle8403
+Node: Acknowledgements12299
+Node: GNU Free Documentation License13181
+Node: Indices38341
+Node: Function index38517
+Node: Variable index38735
+Node: Concept index39505
 
 End Tag Table
 
