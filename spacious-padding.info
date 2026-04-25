@@ -1,4 +1,4 @@
-This is docEBHveo.info, produced by makeinfo version 7.1.1 from
+This is spacious-padding.info, produced by makeinfo version 7.2 from
 spacious-padding.texi.
 
 Copyright (C) 2023-2026 Free Software Foundation, Inc.
@@ -20,7 +20,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docEBHveo.info,  Node: Top,  Next: Installation,  Up: (dir)
+File: spacious-padding.info,  Node: Top,  Next: Installation,  Up: (dir)
 
 Spacious Padding: Increase the padding/spacing of frames and windows
 ********************************************************************
@@ -38,10 +38,10 @@ Copyright (C) 2023-2026 Free Software Foundation, Inc.
      (a) The FSF’s Back-Cover Text is: “You have the freedom to copy and
      modify this GNU manual.”
 
-   This manual, written by Protesilaos Stavrou, describes the
-customization options for the Emacs package called ‘spacious-padding’
-(or ‘spacious-padding.el’), and provides every other piece of
-information pertinent to it.
+   This manual, written by Protesilaos, describes the customization
+options for the Emacs package called ‘spacious-padding’ (or
+‘spacious-padding.el’), and provides every other piece of information
+pertinent to it.
 
    The documentation furnished herein corresponds to stable version
 0.8.0, released on 2025-12-13.  Any reference to a newer feature which
@@ -96,9 +96,8 @@ Indices
 * Variable index::
 * Concept index::
 
-
 
-File: docEBHveo.info,  Node: Installation,  Next: Sample configuration,  Prev: Top,  Up: Top
+File: spacious-padding.info,  Node: Installation,  Next: Sample configuration,  Prev: Top,  Up: Top
 
 1 Installation
 **************
@@ -109,7 +108,7 @@ File: docEBHveo.info,  Node: Installation,  Next: Sample configuration,  Prev: T
 * Manual installation::
 
 
-File: docEBHveo.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
+File: spacious-padding.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
 
 1.1 GNU ELPA package
 ====================
@@ -128,7 +127,7 @@ archive.  Read:
 <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-File: docEBHveo.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
+File: spacious-padding.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
 
 1.2 Manual installation
 =======================
@@ -155,7 +154,7 @@ following commands in a shell prompt:
    Everything is in place to set up the package.
 
 
-File: docEBHveo.info,  Node: Sample configuration,  Next: Overview,  Prev: Installation,  Up: Top
+File: spacious-padding.info,  Node: Sample configuration,  Next: Overview,  Prev: Installation,  Up: Top
 
 2 Sample configuration
 **********************
@@ -181,7 +180,7 @@ File: docEBHveo.info,  Node: Sample configuration,  Next: Overview,  Prev: Insta
        (define-key global-map (kbd "<f8>") #'spacious-padding-mode))
 
 
-File: docEBHveo.info,  Node: Overview,  Next: Acknowledgements,  Prev: Sample configuration,  Up: Top
+File: spacious-padding.info,  Node: Overview,  Next: Acknowledgements,  Prev: Sample configuration,  Up: Top
 
 3 Overview
 **********
@@ -197,7 +196,7 @@ is to produce a more comfortable presentation.
 * Make the mode and header lines subtle::
 
 
-File: docEBHveo.info,  Node: Set the exact spacing values,  Next: Make the mode and header lines subtle,  Up: Overview
+File: spacious-padding.info,  Node: Set the exact spacing values,  Next: Make the mode and header lines subtle,  Up: Overview
 
 3.1 Set the exact spacing values
 ================================
@@ -241,7 +240,7 @@ is used).  Keys are keywords among the following:
      Interface and related.
 
 
-File: docEBHveo.info,  Node: Make the mode and header lines subtle,  Prev: Set the exact spacing values,  Up: Overview
+File: spacious-padding.info,  Node: Make the mode and header lines subtle,  Prev: Set the exact spacing values,  Up: Overview
 
 3.2 Make the mode and header lines subtle
 =========================================
@@ -328,7 +327,7 @@ versions of Emacs give us control of this attribute at the level of the
 individual face.
 
 
-File: docEBHveo.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Overview,  Up: Top
+File: spacious-padding.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Overview,  Up: Top
 
 4 Acknowledgements
 ******************
@@ -337,7 +336,7 @@ File: docEBHveo.info,  Node: Acknowledgements,  Next: GNU Free Documentation Lic
 help matters.
 
 Author/maintainer
-     Protesilaos Stavrou.
+     Protesilaos.
 
 Contributions to code or the manual
      Lucas Gruss, Martin Marshall, Neo Dim, Ruby Iris Juric, Steven
@@ -356,7 +355,7 @@ designs and Daniel Mendler's ‘org-modern’ package:
   2. <https://github.com/minad/org-modern>
 
 
-File: docEBHveo.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
+File: spacious-padding.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
 
 Appendix A GNU Free Documentation License
 *****************************************
@@ -838,7 +837,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docEBHveo.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
+File: spacious-padding.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
 
 B Indices
 *********
@@ -850,7 +849,7 @@ B Indices
 * Concept index::
 
 
-File: docEBHveo.info,  Node: Function index,  Next: Variable index,  Up: Indices
+File: spacious-padding.info,  Node: Function index,  Next: Variable index,  Up: Indices
 
 B.1 Function index
 ==================
@@ -861,7 +860,7 @@ B.1 Function index
 * spacious-padding-mode:                 Overview.              (line 6)
 
 
-File: docEBHveo.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
+File: spacious-padding.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
 
 B.2 Variable index
 ==================
@@ -879,7 +878,7 @@ B.2 Variable index
                                                                (line  6)
 
 
-File: docEBHveo.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
+File: spacious-padding.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 B.3 Concept index
 =================
@@ -891,27 +890,27 @@ B.3 Concept index
 * Installation instructions:             Installation.          (line 6)
 * Package configuration:                 Sample configuration.  (line 6)
 
-
 
 Tag Table:
-Node: Top886
-Node: Installation3518
-Node: GNU ELPA package3700
-Node: Manual installation4271
-Node: Sample configuration5080
-Node: Overview5934
-Node: Set the exact spacing values6408
-Node: Make the mode and header lines subtle8403
-Node: Acknowledgements12299
-Node: GNU Free Documentation License13181
-Node: Indices38341
-Node: Function index38517
-Node: Variable index38735
-Node: Concept index39505
+Node: Top891
+Node: Installation3521
+Node: GNU ELPA package3710
+Node: Manual installation4288
+Node: Sample configuration5104
+Node: Overview5965
+Node: Set the exact spacing values6446
+Node: Make the mode and header lines subtle8448
+Node: Acknowledgements12351
+Node: GNU Free Documentation License13232
+Node: Indices38399
+Node: Function index38582
+Node: Variable index38807
+Node: Concept index39584
 
 End Tag Table
 
 
 Local Variables:
 coding: utf-8
+Info-documentlanguage: en
 End:
