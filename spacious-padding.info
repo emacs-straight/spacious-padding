@@ -1,4 +1,4 @@
-This is spacious-padding.info, produced by makeinfo version 7.2 from
+This is spacious-padding.info, produced by makeinfo version 7.1.1 from
 spacious-padding.texi.
 
 Copyright (C) 2023-2026 Free Software Foundation, Inc.
@@ -95,6 +95,7 @@ Indices
 * Function index::
 * Variable index::
 * Concept index::
+
 
 
 File: spacious-padding.info,  Node: Installation,  Next: Sample configuration,  Prev: Top,  Up: Top
@@ -890,27 +891,27 @@ B.3 Concept index
 * Installation instructions:             Installation.          (line 6)
 * Package configuration:                 Sample configuration.  (line 6)
 
+
 
 Tag Table:
-Node: Top891
-Node: Installation3521
-Node: GNU ELPA package3710
-Node: Manual installation4288
-Node: Sample configuration5104
-Node: Overview5965
-Node: Set the exact spacing values6446
-Node: Make the mode and header lines subtle8448
-Node: Acknowledgements12351
-Node: GNU Free Documentation License13232
-Node: Indices38399
-Node: Function index38582
-Node: Variable index38807
-Node: Concept index39584
+Node: Top893
+Node: Installation3524
+Node: GNU ELPA package3713
+Node: Manual installation4291
+Node: Sample configuration5107
+Node: Overview5968
+Node: Set the exact spacing values6449
+Node: Make the mode and header lines subtle8451
+Node: Acknowledgements12354
+Node: GNU Free Documentation License13235
+Node: Indices38402
+Node: Function index38585
+Node: Variable index38810
+Node: Concept index39587
 
 End Tag Table
 
 
 Local Variables:
 coding: utf-8
-Info-documentlanguage: en
 End:
