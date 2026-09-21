@@ -44,11 +44,11 @@ options for the Emacs package called ‘spacious-padding’ (or
 pertinent to it.
 
    The documentation furnished herein corresponds to stable version
-0.8.0, released on 2025-12-13.  Any reference to a newer feature which
+0.9.0, released on 2026-09-20.  Any reference to a newer feature which
 does not yet form part of the latest tagged commit, is explicitly marked
 as such.
 
-   Current development target is 0.9.0-dev.
+   Current development target is 0.10.0-dev.
 
    • Package name (GNU ELPA): ‘spacious-padding’
    • Official manual: <https://protesilaos.com/emacs/spacious-padding>
@@ -895,19 +895,19 @@ B.3 Concept index
 
 Tag Table:
 Node: Top893
-Node: Installation3524
-Node: GNU ELPA package3713
-Node: Manual installation4291
-Node: Sample configuration5107
-Node: Overview5968
-Node: Set the exact spacing values6449
-Node: Make the mode and header lines subtle8451
-Node: Acknowledgements12354
-Node: GNU Free Documentation License13235
-Node: Indices38402
-Node: Function index38585
-Node: Variable index38810
-Node: Concept index39587
+Node: Installation3525
+Node: GNU ELPA package3714
+Node: Manual installation4292
+Node: Sample configuration5108
+Node: Overview5969
+Node: Set the exact spacing values6450
+Node: Make the mode and header lines subtle8452
+Node: Acknowledgements12355
+Node: GNU Free Documentation License13236
+Node: Indices38403
+Node: Function index38586
+Node: Variable index38811
+Node: Concept index39588
 
 End Tag Table
 

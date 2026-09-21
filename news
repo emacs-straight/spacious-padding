@@ -16,17 +16,30 @@ the manual: <https://protesilaos.com/emacs/spacious-padding>.
 Table of Contents
 ─────────────────
 
-1. Version 0.8.0 on 2025-12-13
+1. Version 0.9.0 on 2026-09-20
+2. Version 0.8.0 on 2025-12-13
 
 
-1 Version 0.8.0 on 2025-12-13
+1 Version 0.9.0 on 2026-09-20
+═════════════════════════════
+
+  This is a small version that addresses a minor inconvenience with the
+  Emacs daemon process reporting an `unspecified-bg' under certain
+  circumstances. The workaround I defined ensures that we always use a
+  known colour value.
+
+  Other than that, the `margin' face, which was introduced in Emacs
+  version 31, is also handled by `spacious-padding-mode'.
+
+
+2 Version 0.8.0 on 2025-12-13
 ═════════════════════════════
 
   This release introduces some nice refinements and fixes a couple of
   subtle bugs.
 
 
-1.1 Subtle mode and header line
+2.1 Subtle mode and header line
 ───────────────────────────────
 
   The new user option `spacious-padding-subtle-frame-lines' supersedes
@@ -56,7 +69,7 @@ Table of Contents
   this style.
 
 
-1.2 The header line underline is spaced further away from the text
+2.2 The header line underline is spaced further away from the text
 ──────────────────────────────────────────────────────────────────
 
   As noted above, when `spacious-padding-subtle-frame-lines' is
@@ -79,7 +92,7 @@ Table of Contents
   assigned copyright to the Free Software Foundation.
 
 
-1.3 The `spacious-padding-widths' can affect Custom buttons
+2.3 The `spacious-padding-widths' can affect Custom buttons
 ───────────────────────────────────────────────────────────
 
   This is about the buttons we find in buffers of the Custom system. For
@@ -89,20 +102,4 @@ Table of Contents
   of spaces for padding. Here is the default value and, as always, the
   documentation cover the details:
 
-  ┌────
-  │ (setq spacious-padding-widths
-  │       '( :internal-border-width 15
-  │          :header-line-width 4
-  │          :mode-line-width 6
-  │          :custom-button-width 3 ; the new one
-  │          :tab-width 4
-  │          :right-divider-width 30
-  │          :scroll-bar-width 8
-  │          :fringe-width 8))
-  └────
-
-
-1.4 Fixes for the Emacs daemon
-──────────────────────────────
-
-  There were reports about incorrect face specifications that could …  …
+  #+begin_src emacs-lisp (setq spacious-padding-widths …  …

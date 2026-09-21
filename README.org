@@ -4,9 +4,9 @@
 #+language: en
 #+options: ':t toc:nil author:t email:t num:t
 #+startup: content
-#+macro: stable-version 0.8.0
-#+macro: release-date 2025-12-13
-#+macro: development-version 0.9.0-dev
+#+macro: stable-version 0.9.0
+#+macro: release-date 2026-09-20
+#+macro: development-version 0.10.0-dev
 #+export_file_name: spacious-padding.texi
 #+texinfo_filename: spacious-padding.info
 #+texinfo_dir_category: Emacs misc features
@@ -19,10 +19,10 @@
 
 #+texinfo: @insertcopying
 
-This manual, written by Protesilaos, describes the
-customization options for the Emacs package called ~spacious-padding~
-(or =spacious-padding.el=), and provides every other piece of
-information pertinent to it.
+This manual, written by Protesilaos, describes the customization
+options for the Emacs package called ~spacious-padding~ (or
+=spacious-padding.el=), and provides every other piece of information
+pertinent to it.
 
 The documentation furnished herein corresponds to stable version
 {{{stable-version}}}, released on {{{release-date}}}.  Any reference to
