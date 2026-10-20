@@ -180,6 +180,16 @@ File: spacious-padding.info,  Node: Sample configuration,  Next: Overview,  Prev
        ;; Set a key binding if you need to toggle spacious padding.
        (define-key global-map (kbd "<f8>") #'spacious-padding-mode))
 
+   If you are using a tiling window manager, then you might also need to
+add the following to your ‘early-init.el’ to make the first Emacs frame
+use the correct size when it launches, so that everything looks right
+with ‘spacious-padding-mode’ enabled:
+
+     ;; Try this:
+     (setq frame-inhibit-implied-resize t)
+     ;; And if that does not work, then try this instead:
+     (setq frame-inhibit-implied-resize 'force)
+
 
 File: spacious-padding.info,  Node: Overview,  Next: Acknowledgements,  Prev: Sample configuration,  Up: Top
 
@@ -344,10 +354,10 @@ Contributions to code or the manual
      Allen, kaibagley.
 
 Ideas and/or user feedback
-     Aronne Raimondi, Chinmay Dalal, Damien Cassou, Julian Flake, Lou
-     Woell, Lucas Gruss, Nicolas Semrau, Pierre Baille, Stefano
-     Rodighiero, Tobias Tschinkowitz, Tomasz Hołubowicz, domsch1988,
-     tusharhero, zealotrush.
+     Aronne Raimondi, Chinmay Dalal, Damien Cassou, Dheeraj Vittal
+     Shenoy, Julian Flake, Lou Woell, Lucas Gruss, Nicolas Semrau,
+     Pierre Baille, Stefano Rodighiero, Tobias Tschinkowitz, Tomasz
+     Hołubowicz, domsch1988, mtp13, tusharhero, zealotrush.
 
    Inspiration for this package comes from Nicolas Rougier's impressive
 designs and Daniel Mendler's ‘org-modern’ package:
@@ -899,15 +909,15 @@ Node: Installation3525
 Node: GNU ELPA package3714
 Node: Manual installation4292
 Node: Sample configuration5108
-Node: Overview5969
-Node: Set the exact spacing values6450
-Node: Make the mode and header lines subtle8452
-Node: Acknowledgements12355
-Node: GNU Free Documentation License13236
-Node: Indices38403
-Node: Function index38586
-Node: Variable index38811
-Node: Concept index39588
+Node: Overview6399
+Node: Set the exact spacing values6880
+Node: Make the mode and header lines subtle8882
+Node: Acknowledgements12785
+Node: GNU Free Documentation License13696
+Node: Indices38863
+Node: Function index39046
+Node: Variable index39271
+Node: Concept index40048
 
 End Tag Table
 
